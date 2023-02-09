@@ -107,6 +107,10 @@
     &__username {
         color: white;
         font-size: 2.2rem;
+
+        &:hover {
+            color: blue;
+        }
     }
 
     &__img {
