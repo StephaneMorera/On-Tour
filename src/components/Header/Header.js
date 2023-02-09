@@ -25,7 +25,9 @@ const Header = () => {
             <img className="header__img" src={avatar} alt="" />
           </div>
           <div className="header__user-title">
-            <h4 className="header__username">Steph88</h4>
+            <Link to="profile" className="header__link">
+              <h4 className="header__username">Steph88</h4>
+            </Link>
           </div>
         </div>
       </section>
