@@ -7,6 +7,9 @@
     background-color: black;
 
     &__text-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 20px;
         margin: 2rem auto;
         display: inline-block;
@@ -43,12 +46,23 @@
         }
     }
 
+    &__logo {
+        object-fit: cover;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &__logo-link {
+
+        &:hover {
+            background-color: blue;
+        }
+    }
+
     &__video-container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
     }
-
-
 }
