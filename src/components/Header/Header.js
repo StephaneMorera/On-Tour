@@ -1,6 +1,7 @@
 import "./Header.scss";
 import avatar from "../../assets/images/avatar.jpg";
 import { Link } from "react-router-dom";
+import banner from "../../assets/images/dj.jpg"
 
 const Header = () => {
   return (
@@ -12,13 +13,7 @@ const Header = () => {
       </Link>
       <section className="header__searchbar">
         <div className="header__search-container">
-          <input
-            className="header__input"
-            name="search"
-            type="text"
-            placeholder="Search Events"
-          />
-          <button className="header__button">Search</button>
+          <img className="header__banner" src={banner} alt="banner" />
         </div>
         <div className="header__user">
           <div className="header__avatar">
