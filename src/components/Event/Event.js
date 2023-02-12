@@ -8,6 +8,7 @@ const Event = ({ event }) => {
       <span className="card__city">
         {event.city}, {event.state}
       </span>
+      <span className="card__venue">{event.venue}</span>
       <span className="card__date">{event.date}</span>
     </article>
   );

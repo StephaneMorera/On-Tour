@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const EventDetailsPage = () => {
   const [card, setCard] = useState([]);
   const [search, setSearch] = useState("");
-  console.log(search);
 
   useEffect(() => {
     const getEvent = async () => {
@@ -32,7 +31,7 @@ const EventDetailsPage = () => {
     .map((event) => {
       return (
         <>
-          <Event key={event.id} event={event} />
+          <Event key={card.id} event={event} />
         </>
       );
     });
