@@ -1,8 +1,11 @@
 import "./ProfilePage.scss";
-import avatar from "../../assets/images/avatar.jpg"
+import avatar from "../../assets/images/pic.jpg"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Event from "../../components/Event/Event";
+import logo from "../../assets/images/bass-logo.jpg"
+import { Link } from "react-router-dom";
+import friend from "../../assets/images/buckethead.jpg"
 
 const ProfilePage = () => {
     const [card, setCard] = useState([]);
@@ -23,8 +26,8 @@ const ProfilePage = () => {
     let events = card.map((event) => {
         return (
             <>
-          <Event className="profile__card" key={card.id} event={event} />
-        </>
+                <Event className="profile__card" key={card.id} event={event} />
+            </>
         )
     })
 
@@ -34,7 +37,7 @@ const ProfilePage = () => {
             <section className="profile__container">
                 <article className="profile__info">
                     <div className="profile__user-img">
-                        <img src={avatar} alt="user image" className="profile__avatar" />
+                        <img src={avatar} alt="user" className="profile__avatar" />
                     </div>
                     <div className="profile__user-info">
                         <h1 className="profile__name">Stephane Morera</h1>
@@ -43,24 +46,38 @@ const ProfilePage = () => {
                     </div>
                 </article>
                 <article className="profile__friends-container">
+                    <h1 className="profile__friends-title">My Friends</h1>
                     <div className="profile__friends">
-                        <div className="profile__friends-avatar"></div>
+                        <div className="profile__friends-avatar">
+                            <img className="profile__friend-image" src={friend} alt="friend" />
+                        </div>
                         <span className="profile__friends-name">Jane21</span>
                     </div>
                     <div className="profile__friends">
-                        <div className="profile__friends-avatar"></div>
+                        <div className="profile__friends-avatar">
+                        <img className="profile__friend-image" src={friend} alt="friend" />
+                        </div>
                         <span className="profile__friends-name">Rob123</span>
                     </div>
                     <div className="profile__friends">
-                        <div className="profile__friends-avatar"></div>
+                        <div className="profile__friends-avatar">
+                        <img className="profile__friend-image" src={friend} alt="friend" />
+                        </div>
                         <span className="profile__friends-name">Blaze15</span>
                     </div>
                     <div className="profile__friends">
-                        <div className="profile__friends-avatar"></div>
+                        <div className="profile__friends-avatar">
+                        <img className="profile__friend-image" src={friend} alt="friend" />
+                        </div>
                         <span className="profile__friends-name">Amanda67</span>
                     </div>
                 </article>
             </section>
+            <div className="profile__back-button">
+                <Link to="/events" className="home__logo-link">
+                    <img className="home__logo" src={logo} alt="logo" />
+                </Link>
+            </div>
             <section className="profile__events-container">
                 <div className="profile__upcoming-container">
                 <h1 className="profile__upcoming">My Upcoming Events</h1>

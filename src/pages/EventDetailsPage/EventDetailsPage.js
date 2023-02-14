@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const EventDetailsPage = () => {
   const [card, setCard] = useState([]);
   const [search, setSearch] = useState("");
+  const [post, setPost] = useState({});
 
   useEffect(() => {
     const getEvent = async () => {

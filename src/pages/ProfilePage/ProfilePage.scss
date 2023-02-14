@@ -4,6 +4,7 @@
 
 .profile {
     padding: 1rem;
+    background-color: black;
 
     &__container {
         padding: 1rem;
@@ -36,16 +37,18 @@
         width: 100%;
 
         @include tablet{
-            width: 60%;
+            width: 35%;
         }
     }
 
     &__avatar {
         width: 100%;
+        border-radius: 5%;
     }
 
     &__user-info {
         width: 100%;
+        color: white;
 
         @include tablet {
             width: 40%;
@@ -85,11 +88,19 @@
         }
     }
 
+    &__friends-title {
+        color: white;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 2.4rem;
+    }
+
     &__friends {
         display: flex;
         flex-direction: row;
         justify-content: baseline;
         margin-bottom: 1rem;
+        
 
         @include tablet {
             margin-bottom: 0;
@@ -97,15 +108,23 @@
     }
 
     &__friends-avatar {
+        // width: 4rem;
+        // height: 4rem;
+        background-color: black;
+        // border-radius: 50%;
+        margin-right: 2rem;
+        // object-fit: contain;
+    }
+
+    &__friend-image {
+        object-fit: cover;
         width: 4rem;
         height: 4rem;
-        background-color: dimgrey;
         border-radius: 50%;
-        margin-right: 2rem;
     }
 
     &__friends-name {
-        color: black;
+        color: white;
         margin-top: 1rem;
     }
 
@@ -131,6 +150,13 @@
     }
 
     &__upcoming-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    &__back-button {
         display: flex;
         justify-content: center;
         align-items: center;

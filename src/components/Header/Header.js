@@ -1,7 +1,7 @@
 import "./Header.scss";
-import avatar from "../../assets/images/avatar.jpg";
+import avatar from "../../assets/images/pic.jpg";
 import { Link } from "react-router-dom";
-import banner from "../../assets/images/dj.jpg"
+import banner from "../../assets/images/dj.jpg";
 
 const Header = () => {
   return (
@@ -17,7 +17,7 @@ const Header = () => {
         </div>
         <div className="header__user">
           <div className="header__avatar">
-            <img className="header__img" src={avatar} alt="" />
+            <img className="header__img" src={avatar} alt="user" />
           </div>
           <div className="header__user-title">
             <Link to="profile" className="header__link">

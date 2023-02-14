@@ -33,6 +33,12 @@
         padding-left: 2rem;
         border: solid 1px gray;
 
+        &:focus {
+            border: solid 2px;
+            outline: none !important;
+            border-color: blue;
+        }
+
         @include tablet {
             width: 50%;
         }
