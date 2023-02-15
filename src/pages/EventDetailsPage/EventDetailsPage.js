@@ -2,12 +2,10 @@ import "./EventDetailsPage.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Event from "../../components/Event/Event";
-import { Link } from "react-router-dom";
 
 const EventDetailsPage = () => {
   const [card, setCard] = useState([]);
   const [search, setSearch] = useState("");
-  const [post, setPost] = useState({});
 
   useEffect(() => {
     const getEvent = async () => {
@@ -32,7 +30,7 @@ const EventDetailsPage = () => {
     .map((event) => {
       return (
         <>
-          <Event key={card.id} event={event} />
+          <Event key={event.id} event={event} />
         </>
       );
     });

@@ -28,6 +28,7 @@
         object-fit: cover;
         width: 100%;
         border-radius: 1rem;
+        height: 23rem;
     }
 
     &__title {
@@ -56,7 +57,7 @@
         gap: 1rem;
     }
 
-    &__tickets {
+    &__button {
         background-color: black;
         color: white;
         border: solid 2px white;
@@ -68,17 +69,17 @@
         }
     }
 
-    &__add {
-        background-color: black;
-        color: white;
-        border: solid 2px white;
-        border-radius: 5%;
-        cursor: pointer;
+    // &__add {
+    //     background-color: black;
+    //     color: white;
+    //     border: solid 2px white;
+    //     border-radius: 5%;
+    //     cursor: pointer;
 
-        &:hover {
-            border-color: blue;
-        }
-    }
+    //     &:hover {
+    //         border-color: blue;
+    //     }
+    // }
 
 
 }

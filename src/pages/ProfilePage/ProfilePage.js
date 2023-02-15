@@ -20,7 +20,7 @@ const ProfilePage = () => {
           }
         };
         getEvent();
-    }, []);
+    }, [card]);
 
 
     let events = card.map((event) => {
