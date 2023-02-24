@@ -1,18 +1,15 @@
-import "./Event.scss";
+import "./FollowingEvent.scss";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const Event = ({ event }) => {
+const FollowingEvent = ({ event }) => {
   const [events, setEvents] = useState([]);
-  const navigate = useNavigate();
 
-  const handlePost = async () => {
+  const handleDelete = async (id) => {
     try {
-      await axios.post(`http://localhost:8080/profile`, event);
-      setEvents(event);
-      alert("Enjoy the show!!");
-      navigate("/profile");
+      await axios.delete(`http://localhost:8080/profile/${id}`, event);
+      setEvents(events.filter((ev) => ev.id !== event.id));
+      alert("You are no longer following this event");
     } catch (error) {
       console.log(error);
     }
@@ -31,12 +28,12 @@ const Event = ({ event }) => {
         <a href={event.url}>
           <button className="card__button">get tickets</button>
         </a>
-        <button type="submit" className="card__button" onClick={handlePost}>
-          Follow
+        <button type="submit" className="card__button" onClick={handleDelete}>
+          Unfollow
         </button>
       </div>
     </article>
   );
 };
 
-export default Event;
+export default FollowingEvent;

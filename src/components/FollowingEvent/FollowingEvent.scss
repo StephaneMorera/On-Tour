@@ -1,0 +1,71 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/global";
+@use "../../styles/variables" as *;
+
+.card {
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px white;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+
+    @include tablet {
+        width: 40%;
+    }
+
+    @include desktop {
+        width: 23%;
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 1rem;
+        height: 23rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+
+        @include tablet {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__venue {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    &__date {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__button {
+        background-color: black;
+        color: white;
+        border: solid 2px white;
+        border-radius: 5%;
+        cursor: pointer;
+
+        &:hover {
+            border-color: blue;
+        }
+    }
+}

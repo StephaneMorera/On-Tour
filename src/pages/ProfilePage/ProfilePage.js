@@ -2,7 +2,7 @@ import "./ProfilePage.scss";
 import avatar from "../../assets/images/pic.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Event from "../../components/Event/Event";
+import FollowingEvent from "../../components/FollowingEvent/FollowingEvent";
 import logo from "../../assets/images/bass-logo.jpg";
 import { Link } from "react-router-dom";
 import friend from "../../assets/images/buckethead.jpg";
@@ -25,7 +25,7 @@ const ProfilePage = () => {
   let events = card.map((event) => {
     return (
       <>
-        <Event className="profile__card" key={card.id} event={event} />
+        <FollowingEvent className="profile__card" key={card.id} event={event} />
       </>
     );
   });
