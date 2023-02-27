@@ -26,7 +26,7 @@ const FollowingEvent = ({ event }) => {
       <span className="card__date">{event.date}</span>
       <div className="card__buttons">
         <a href={event.url}>
-          <button className="card__button">get tickets</button>
+          <button className="card__button">Get Tickets</button>
         </a>
         <button type="submit" className="card__button" onClick={handleDelete}>
           Unfollow

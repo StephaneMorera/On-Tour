@@ -58,14 +58,16 @@
     }
 
     &__button {
+        width: 10rem;
+        height: 4rem;
         background-color: black;
         color: white;
-        border: solid 2px white;
-        border-radius: 5%;
+        border: solid 2px blue;
+        border-radius: 10%;
         cursor: pointer;
 
         &:hover {
-            border-color: blue;
+            border-color: white;
         }
     }
 }

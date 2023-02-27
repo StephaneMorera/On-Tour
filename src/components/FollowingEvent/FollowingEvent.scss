@@ -60,12 +60,12 @@
     &__button {
         background-color: black;
         color: white;
-        border: solid 2px white;
+        border: solid 2px blue;
         border-radius: 5%;
         cursor: pointer;
 
         &:hover {
-            border-color: blue;
+            border-color: white;
         }
     }
 }
